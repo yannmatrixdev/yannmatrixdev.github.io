@@ -1,0 +1,16 @@
+{
+    "name": "RED ODYSSEY",
+    "shortname": "RED ODYSSEY",
+    "start_url": ".",
+    "background_color": "#414141",
+    "theme_color": "#a8324a",
+    "display": "fullscreen",
+    "icons": [{
+            "src": "/src/img/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+
+        }
+
+    ]
+}

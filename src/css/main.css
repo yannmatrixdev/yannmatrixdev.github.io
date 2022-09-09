@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Font 1';
+    src: url(./fonts/font0.ttf);
+}
+
+@font-face {
+    font-family: 'Font 2';
+    src: url(./fonts/font1.ttf);
+}
+
+* {
+    font-family: 'Font 2', 'Font 1', sans-serif;
+}
+
+body {
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#idleScreen {
+    padding: 20px;
+    background: #050505;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+.idleTitle {
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.idleTitle:after {
+    margin: 8px;
+    content: ' ';
+    background: linear-gradient(90deg, #0000, #fff9, #0000);
+    width: 100%;
+    height: 2px;
+}
+
+.idleSubtitle {
+    background: #fff4;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.idleCode {
+    color: #a8324a;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 300ms;
+}
+
+.idleCode:hover {
+    color: #e4647e;
+}
+
+.idleRefresh {
+    background: #ffffff52;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    outline: 0;
+    color: white;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.idleRefresh:hover {
+    box-shadow: 0 0 0 5px #fff2;
+    color: #ff4b6f;
+}
