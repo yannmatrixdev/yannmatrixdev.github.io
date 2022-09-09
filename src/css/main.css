@@ -23,7 +23,7 @@ body {
 
 #idleScreen {
     padding: 20px;
-    background: #050505;
+    background: linear-gradient(45deg, #ff6e6e, #ff5f5f);
     color: white;
     display: flex;
     align-items: center;
@@ -31,6 +31,20 @@ body {
     width: 100vw;
     height: 100vh;
     justify-content: center;
+    z-index: -9;
+}
+
+.iconOutlined {
+    opacity: 0;
+    width: 490px;
+    left: 470px;
+    position: fixed;
+    z-index: 2;
+    transition: 4s;
+}
+
+.iconOutlined.active {
+    opacity: 1;
 }
 
 #idleHolder {
@@ -39,7 +53,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: 800ms
+    transition: 800ms;
+    background: #00000099;
+    border-bottom: 15px solid #af324b;
+    padding: 8px;
+    border-radius: 4px;
+    z-index: 5;
 }
 
 #idleHolder.active {
@@ -70,7 +89,7 @@ body {
 }
 
 .idleCode {
-    color: #a8324a;
+    color: #fc4f71;
     text-decoration: underline;
     cursor: pointer;
     margin-bottom: 20px;

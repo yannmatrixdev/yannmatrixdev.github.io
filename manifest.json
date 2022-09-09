@@ -7,9 +7,19 @@
     "display": "fullscreen",
     "icons": [{
             "src": "/src/img/icon.png",
-            "sizes": "512x512",
+            "sizes": "821x818",
             "type": "image/png"
+        },
 
+        {
+            "src": "/src/img/icon-1x.png",
+            "sizes": "514x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/src/img/icon-2x.png",
+            "sizes": "256x255",
+            "type": "image/png"
         }
 
     ]
