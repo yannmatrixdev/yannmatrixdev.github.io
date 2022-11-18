@@ -9,41 +9,249 @@
     <meta name="description" content="Welcome to the Red Odyssey.">
     <meta content="RED ODYSSEY" property="og:title">
     <meta content="..." property="og:description">
-    <meta content="https://yannmatrix.github.io" property="og:url">
-    <meta content="https://yannmatrix.github.io/img/icon.png" property="og:image">
-    <title> RED ODYSSEY </title>
-    <script src="src/script/index.js" defer></script>
-    <script src="src/script/worker.js" defer></script>
-    <link rel="manifest" href="manifest.json">
+    <meta content="https://yannmatrixdev.github.io" property="og:url">
+    <meta content="https://yannmatrixdev.github.io/img/icon.png" property="og:image">
+    <title> Red Odyssey Gamedex </title>
+    <script src="/src/script/index.js"></script>
     <link rel="shortcut icon" href="/src/img/icon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/src/img/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/web.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
 
 <body>
-    <div id="idleScreen">
-        <img src="/src/img/icon_out.png" class="iconOutlined">
-        <div id="idleHolder">
-            <div class="idleTitle"> Servers/Game are undergoing maintenance. </div>
-            <div class="idleSubtitle"> Servers are being worked on right now, we'll be back soon! </div>
-            <div class="idleCode"> u+02 </div>
-            <button class="idleRefresh" onclick="window.location.reload();"> Refresh Connection </button>
-            <div class="socialsContainer">
-                <a href="https://twitter.com/enzenra" class="socialItem">
-                    <img src="/src/img/icon_01.png" class="socialImg">
-                </a>
-                <a href="https://twitch.tv/decodejs" class="socialItem">
-                    <img src="/src/img/icon_02.png" class="socialImg">
-                </a>
-                <a href="https://www.youtube.com/channel/UCBHkCLZ5cgBb8FGqO9-5rdA" class="socialItem">
-                    <img src="/src/img/icon_03.png" class="socialImg">
-                </a>
+    <!--
+    <div id="loader" class="active">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="loaderText"> Cleaning up... </div>
+    </div> -->
+
+    <div id="navBar">
+        <div class="navLeft">
+            <a href="" class="loginLink signedOut">
+                <button class="loginButton signedOut"> Login </button>
+            </a>
+
+            <div class="title"> Enhancements </div>
+        </div>
+
+
+        <div class="navRight">
+            <div class="navItem" data-link> General Info </div>
+            <div class="navItem" data-link> Combos </div>
+            <div class="navItem" data-link> Enhancements </div>
+            <div class="navItem" data-link> Enemies </div>
+            <div class="navItem" data-link> Heroes </div>
+        </div>
+
+    </div>
+    <!-- →↑ -->
+    <div class="content">
+        <div class="section-100">
+            <div class="section-title"> Welcome to the Gamedex. </div>
+            <div class="sectionContent">
+                This little page should contain pretty much everything and everyone encompassing the game in general. Feel free to check out the tabs for more specific stuff.
+            </div>
+        </div>
+        <div class="section-200">
+            <div class="section-title"> Combo Strings </div>
+            <div class="sectionContent">
+                <div class="moveContainer comboContainer">
+                    <div class="comboItem">
+                        <div class="combo-name"> Dragon's Flame </div>
+                        <div class="combo-string"> → J K </div>
+                    </div>
+                    <div class="comboItem">
+                        <div class="combo-name"> Flaming Fists </div>
+                        <div class="combo-string"> → J K → I </div>
+                    </div>
+                    <div class="comboItem">
+                        <div class="combo-name"> Flowing Water </div>
+                        <div class="combo-string"> I I </div>
+                    </div>
+                    <div class="comboItem">
+                        <div class="combo-name"> Rainy Day </div>
+                        <div class="combo-string"> I I K </div>
+                    </div>
+                    <div class="comboItem">
+                        <div class="combo-name"> Dark Presence </div>
+                        <div class="combo-string"> ← I J </div>
+                    </div>
+                    <div class="comboItem">
+                        <div class="combo-name"> Soulless </div>
+                        <div class="combo-string"> ← I J ↓ I </div>
+                    </div>
+                    <div class="comboItem">
+                        <div class="combo-name"> Student's Belt </div>
+                        <div class="combo-string"> J I </div>
+                    </div>
+                    <div class="comboItem">
+                        <div class="combo-name"> Apprentice </div>
+                        <div class="combo-string"> J I J I </div>
+                    </div>
+                    <div class="comboItem">
+                        <div class="combo-name"> Master's Mark </div>
+                        <div class="combo-string"> J I J I J I </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title"> Special Moves </div>
+            <div class="sectionContent">
+                <div class="moveContainer specialContainer">
+                    <div class="comboItem">
+                        <div class="combo-top">
+                            <div class="combo-name"> Fireball </div>
+                            <div class="combo-string"> ← → J </div>
+                        </div>
+
+                        <div class="combo-info">
+                            Stamina Burn [N]: Amount of fireballs changes from 1 to 3.
+                        </div>
+                    </div>
+
+                    <div class="comboItem">
+                        <div class="combo-top">
+                            <div class="combo-name"> Fire Breath </div>
+                            <div class="combo-string"> ↓ → L </div>
+                        </div>
+
+                        <div class="combo-info">
+                            Stamina Burn [N]: Extends breath by walking forward.
+                        </div>
+                    </div>
+
+                    <div class="comboItem">
+                        <div class="combo-top">
+                            <div class="combo-name"> Shadow Slam </div>
+                            <div class="combo-string">↓ ↑ </div>
+                        </div>
+
+                        <div class="combo-info">
+                            Stamina Burn [N]: Deals extra damage by going into more portals.
+                        </div>
+                    </div>
+
+                    <div class="comboItem">
+                        <div class="combo-top">
+                            <div class="combo-name"> Shadow Push </div>
+                            <div class="combo-string"> ← → I </div>
+                        </div>
+
+                        <div class="combo-info">
+                            Stamina Burn [N]: Launches opponent farther back and deals DOT.
+                        </div>
+                    </div>
+
+                    <div class="comboItem">
+                        <div class="combo-top">
+                            <div class="combo-name"> Water Bubble </div>
+                            <div class="combo-string"> ← → K </div>
+                        </div>
+
+                        <div class="combo-info">
+                            Stamina Burn [N]: Holds opponent in bubble. (Stun)
+                        </div>
+                    </div>
+
+                    <div class="comboItem">
+                        <div class="combo-top">
+                            <div class="combo-name"> Hydro Boost </div>
+                            <div class="combo-string"> ↓ ← K </div>
+                        </div>
+
+                        <div class="combo-info">
+                            Stamina Burn [N]: Launches you up into the air higher along with any opponents near.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-300">
+            <div class="section-title"> Enhancements (by level) </div>
+            <div class="sectionContent">
+                <div class="enhancementList">
+                    <div class="enhancementItem">
+
+                        <div class="en-name">
+                            <div class="en-nameVal"> (I - IV) Flame Aura </div>
+                            <div class="en-elm"> Fire </div>
+                        </div>
+                        <div class="en-info"> Surrounds physical attacks in a burning aura, fueled by your own rage. (DOT)
+                        </div>
+                    </div>
+
+                    <div class="enhancementItem">
+                        <div class="en-name">
+                            <div class="en-nameVal"> (I - IV) Ice Aura </div>
+                            <div class="en-elm"> Ice </div>
+                        </div>
+                        <div class="en-info"> Surrounds physical attacks in a freezing cold. (Freezes enemies every 3rd hit.) </div>
+                    </div>
+
+                    <div class="enhancementItem">
+                        <div class="en-name">
+                            <div class="en-nameVal"> (I - IV) Shadow Aura </div>
+                            <div class="en-elm"> Shadow </div>
+                        </div>
+                        <div class="en-info"> Surrounds physical attacks in a black shadow, drawn from the moon. (Slows enemies and prevents them from jumping.)</div>
+                    </div>
+
+                    <div class="enhancementItem">
+                        <div class="en-name">
+                            <div class="en-nameVal"> (I - IV) Water Aura </div>
+                            <div class="en-elm"> Water </div>
+                        </div>
+                        <div class="en-info"> Surrounds physical attacks in flowing water. (Hastens physical and water based attacks.) </div>
+                    </div>
+
+                    <div class="enhancementItem">
+                        <div class="en-name">
+                            <div class="en-nameVal"> (I) Elemental Aura </div>
+                            <div class="en-elm"> All </div>
+                        </div>
+                        <div class="en-info"> Surrounds physical attacks in a colorful light due to the peacefulness in your heart. <br> (Amplifies damage, hastens attacks, grants ability to dodge some attacks while blocking)
+                        </div>
+                    </div>
+
+                    <div class="enhancementItem">
+                        <div class="en-name">
+                            <div class="en-nameVal"> (I-IV) Amplification </div>
+                            <div class="en-elm"> All </div>
+                        </div>
+                        <div class="en-info"> Stamina Burn [N] attacks will deal up to 5%/10%/20%/40% more damage.
+                        </div>
+                    </div>
+
+                    <div class="enhancementItem">
+                        <div class="en-name">
+                            <div class="en-nameVal"> (I-III) Armor Breaker </div>
+                            <div class="en-elm"> All </div>
+                        </div>
+                        <div class="en-info"> Grants your attacks the chance to pierce your opponents armor. (25%/50%/75%)
+                        </div>
+                    </div>
+
+                    <div class="enhancementItem">
+                        <div class="en-name">
+                            <div class="en-nameVal"> (I-IV) Energy Control </div>
+                            <div class="en-elm"> All </div>
+                        </div>
+                        <div class="en-info"> Your offensive/defensive gauge costs are 25%/50%/75%/90% cheaper.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- <script type="module" src="/static.js"></script> -->
 </body>
 
 </html>

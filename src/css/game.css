@@ -1,0 +1,32 @@
+body {
+    background: black;
+}
+
+#startup {
+    display: block;
+}
+
+#startup.active {
+    display: block;
+    z-index: 5;
+}
+
+#startupVideo {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#backgroundImageHolder {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#backgroundImage {
+    filter: brightness(0.5)
+}
